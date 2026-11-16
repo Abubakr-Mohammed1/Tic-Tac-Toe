@@ -73,6 +73,16 @@ namespace Tic_Tac_Toe.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap game1 {
+            get {
+                object obj = ResourceManager.GetObject("game1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap O {
             get {
                 object obj = ResourceManager.GetObject("O", resourceCulture);
@@ -86,6 +96,16 @@ namespace Tic_Tac_Toe.Properties {
         internal static System.Drawing.Bitmap QuestionMark {
             get {
                 object obj = ResourceManager.GetObject("QuestionMark", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap QuestionMark1 {
+            get {
+                object obj = ResourceManager.GetObject("QuestionMark1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

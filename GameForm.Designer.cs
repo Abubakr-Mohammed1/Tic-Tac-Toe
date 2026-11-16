@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(GameForm));
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.lblTurn = new System.Windows.Forms.Label();
@@ -105,7 +106,7 @@
             this.lblWinner.AutoSize = true;
             this.lblWinner.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblWinner.ForeColor = System.Drawing.Color.Lime;
-            this.lblWinner.Location = new System.Drawing.Point(132, 635);
+            this.lblWinner.Location = new System.Drawing.Point(129, 632);
             this.lblWinner.Name = "lblWinner";
             this.lblWinner.Size = new System.Drawing.Size(445, 91);
             this.lblWinner.TabIndex = 3;
@@ -127,7 +128,7 @@
             // pic8
             // 
             this.pic8.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pic8.Image = global::Tic_Tac_Toe.Properties.Resources.QuestionMark;
+            this.pic8.Image = ((System.Drawing.Image)(resources.GetObject("pic8.Image")));
             this.pic8.Location = new System.Drawing.Point(1064, 697);
             this.pic8.Name = "pic8";
             this.pic8.Size = new System.Drawing.Size(150, 150);
@@ -140,7 +141,7 @@
             // pic9
             // 
             this.pic9.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pic9.Image = global::Tic_Tac_Toe.Properties.Resources.QuestionMark;
+            this.pic9.Image = ((System.Drawing.Image)(resources.GetObject("pic9.Image")));
             this.pic9.Location = new System.Drawing.Point(1297, 697);
             this.pic9.Name = "pic9";
             this.pic9.Size = new System.Drawing.Size(150, 150);
@@ -153,7 +154,7 @@
             // pic6
             // 
             this.pic6.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pic6.Image = global::Tic_Tac_Toe.Properties.Resources.QuestionMark;
+            this.pic6.Image = ((System.Drawing.Image)(resources.GetObject("pic6.Image")));
             this.pic6.Location = new System.Drawing.Point(1297, 464);
             this.pic6.Name = "pic6";
             this.pic6.Size = new System.Drawing.Size(150, 150);
@@ -166,7 +167,7 @@
             // pic5
             // 
             this.pic5.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pic5.Image = global::Tic_Tac_Toe.Properties.Resources.QuestionMark;
+            this.pic5.Image = ((System.Drawing.Image)(resources.GetObject("pic5.Image")));
             this.pic5.Location = new System.Drawing.Point(1064, 464);
             this.pic5.Name = "pic5";
             this.pic5.Size = new System.Drawing.Size(150, 150);
@@ -179,7 +180,7 @@
             // pic3
             // 
             this.pic3.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pic3.Image = global::Tic_Tac_Toe.Properties.Resources.QuestionMark;
+            this.pic3.Image = ((System.Drawing.Image)(resources.GetObject("pic3.Image")));
             this.pic3.Location = new System.Drawing.Point(1297, 231);
             this.pic3.Name = "pic3";
             this.pic3.Size = new System.Drawing.Size(150, 150);
@@ -192,7 +193,7 @@
             // pic7
             // 
             this.pic7.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pic7.Image = global::Tic_Tac_Toe.Properties.Resources.QuestionMark;
+            this.pic7.Image = ((System.Drawing.Image)(resources.GetObject("pic7.Image")));
             this.pic7.Location = new System.Drawing.Point(831, 697);
             this.pic7.Name = "pic7";
             this.pic7.Size = new System.Drawing.Size(150, 150);
@@ -205,7 +206,7 @@
             // pic4
             // 
             this.pic4.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pic4.Image = global::Tic_Tac_Toe.Properties.Resources.QuestionMark;
+            this.pic4.Image = ((System.Drawing.Image)(resources.GetObject("pic4.Image")));
             this.pic4.Location = new System.Drawing.Point(831, 464);
             this.pic4.Name = "pic4";
             this.pic4.Size = new System.Drawing.Size(150, 150);
@@ -218,7 +219,7 @@
             // pic2
             // 
             this.pic2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pic2.Image = global::Tic_Tac_Toe.Properties.Resources.QuestionMark;
+            this.pic2.Image = ((System.Drawing.Image)(resources.GetObject("pic2.Image")));
             this.pic2.Location = new System.Drawing.Point(1064, 231);
             this.pic2.Name = "pic2";
             this.pic2.Size = new System.Drawing.Size(150, 150);
@@ -231,7 +232,7 @@
             // pic1
             // 
             this.pic1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pic1.Image = global::Tic_Tac_Toe.Properties.Resources.QuestionMark;
+            this.pic1.Image = ((System.Drawing.Image)(resources.GetObject("pic1.Image")));
             this.pic1.Location = new System.Drawing.Point(831, 231);
             this.pic1.Name = "pic1";
             this.pic1.Size = new System.Drawing.Size(150, 150);
