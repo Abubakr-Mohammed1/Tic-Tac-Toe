@@ -17,12 +17,25 @@ namespace Tic_Tac_Toe
             InitializeComponent();
         }
 
-        void GameOver()
+        bool GameOver()
         {
-            lblWinner.Text = lblTurn.Text;
-            lblTurn.Text = "Game Over";
+            if (CheckWinner())
+            {
+                lblWinner.Text = lblTurn.Text;
+                lblTurn.Text = "Game Over";
+                MessageBox.Show("Game Over.", "GameOver", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return true;
+            }
+            else if (CheckDraw())
+            {
+                lblTurn.Text = "Game Over";
+                lblWinner.Text = "Draw";
+                MessageBox.Show("Game Over.", "GameOver", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return true;
+            }
+            else
+                return false;
 
-            MessageBox.Show("Game Over.", "GameOver", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
         bool CheckWinner()
@@ -80,6 +93,43 @@ namespace Tic_Tac_Toe
             return false;
         }
 
+        bool CheckDraw()
+        {
+            byte EmptyCounter = 0;
+
+            if (pic1.Tag.ToString() == "Empty")
+                EmptyCounter++;
+
+            if (pic2.Tag.ToString() == "Empty")
+                EmptyCounter++;
+
+            if (pic3.Tag.ToString() == "Empty")
+                EmptyCounter++;
+
+            if (pic4.Tag.ToString() == "Empty")
+                EmptyCounter++;
+
+            if (pic5.Tag.ToString() == "Empty")
+                EmptyCounter++;
+
+            if (pic6.Tag.ToString() == "Empty")
+                EmptyCounter++;
+
+            if (pic7.Tag.ToString() == "Empty")
+                EmptyCounter++;
+
+            if (pic8.Tag.ToString() == "Empty")
+                EmptyCounter++;
+
+            if (pic9.Tag.ToString() == "Empty")
+                EmptyCounter++;
+
+            if (EmptyCounter == 0)
+                return true;
+            else
+                return false;
+        }
+
         void ChangeTurn()
         {
             if (lblTurn.Text == "Player 1")
@@ -90,6 +140,9 @@ namespace Tic_Tac_Toe
 
         void GameTurn(PictureBox pb)
         {
+            if (lblTurn.Text == "Game Over")
+                return;
+
             if (pb.Tag == null || pb.Tag.ToString() != "Empty")
             {
                 MessageBox.Show("Wrong Choice", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -107,8 +160,8 @@ namespace Tic_Tac_Toe
                 pb.Tag = "O";
             }
 
-            if (CheckWinner())
-                GameOver();
+            if (GameOver())
+                return;
             else
                 ChangeTurn();
 
