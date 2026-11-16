@@ -17,9 +17,67 @@ namespace Tic_Tac_Toe
             InitializeComponent();
         }
 
-        void CheckWinner()
+        void GameOver()
         {
+            lblWinner.Text = lblTurn.Text;
+            lblTurn.Text = "Game Over";
 
+            MessageBox.Show("Game Over.", "GameOver", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+
+        bool CheckWinner()
+        {
+            if (pic1.Tag == "X" && pic2.Tag == "X" && pic3.Tag == "X")
+                return true;
+
+            else if (pic1.Tag == "O" && pic2.Tag == "O" && pic3.Tag == "O")
+                return true;
+
+            else if (pic4.Tag == "X" && pic5.Tag == "X" && pic6.Tag == "X")
+                return true;
+
+            else if (pic4.Tag == "O" && pic5.Tag == "O" && pic6.Tag == "O")
+                return true;
+
+            else if (pic7.Tag == "X" && pic8.Tag == "X" && pic9.Tag == "X")
+                return true;
+
+            else if (pic7.Tag == "O" && pic8.Tag == "O" && pic9.Tag == "O")
+                return true;
+
+
+            else if (pic1.Tag == "X" && pic5.Tag == "X" && pic9.Tag == "X")
+                return true;
+
+            else if (pic1.Tag == "O" && pic5.Tag == "O" && pic9.Tag == "O")
+                return true;
+
+            else if (pic3.Tag == "X" && pic5.Tag == "X" && pic7.Tag == "X")
+                return true;
+
+            else if (pic3.Tag == "O" && pic5.Tag == "O" && pic7.Tag == "O")
+                return true;
+
+
+            else if (pic1.Tag == "X" && pic4.Tag == "X" && pic7.Tag == "X")
+                return true;
+
+            else if (pic1.Tag == "O" && pic4.Tag == "O" && pic7.Tag == "O")
+                return true;
+
+            else if (pic2.Tag == "X" && pic5.Tag == "X" && pic8.Tag == "X")
+                return true;
+
+            else if (pic2.Tag == "O" && pic5.Tag == "O" && pic8.Tag == "O")
+                return true;
+
+            else if (pic3.Tag == "X" && pic6.Tag == "X" && pic9.Tag == "X")
+                return true;
+
+            else if (pic3.Tag == "O" && pic6.Tag == "O" && pic9.Tag == "O")
+                return true;
+
+            return false;
         }
 
         void ChangeTurn()
@@ -49,8 +107,16 @@ namespace Tic_Tac_Toe
                 pb.Tag = "O";
             }
 
-            ChangeTurn();
+            if (CheckWinner())
+                GameOver();
+            else
+                ChangeTurn();
 
+        }
+
+        void StartGame(PictureBox pb)
+        {
+            GameTurn(pb);
         }
 
         private void GameForm_Paint(object sender, PaintEventArgs e)
@@ -72,7 +138,32 @@ namespace Tic_Tac_Toe
         {
             PictureBox pb = (PictureBox)sender;
 
-            GameTurn(pb);
+            StartGame(pb);
+        }
+
+        private void btnRestartGame_Click(object sender, EventArgs e)
+        {
+            lblTurn.Text = "Player 1";
+            lblWinner.Text = "In Progress";
+            pic1.Image = Properties.Resources.QuestionMark;
+            pic2.Image = Properties.Resources.QuestionMark;
+            pic3.Image = Properties.Resources.QuestionMark;
+            pic4.Image = Properties.Resources.QuestionMark;
+            pic5.Image = Properties.Resources.QuestionMark;
+            pic6.Image = Properties.Resources.QuestionMark;
+            pic7.Image = Properties.Resources.QuestionMark;
+            pic8.Image = Properties.Resources.QuestionMark;
+            pic9.Image = Properties.Resources.QuestionMark;
+
+            pic1.Tag = "Empty";
+            pic2.Tag = "Empty";
+            pic3.Tag = "Empty";
+            pic4.Tag = "Empty";
+            pic5.Tag = "Empty";
+            pic6.Tag = "Empty";
+            pic7.Tag = "Empty";
+            pic8.Tag = "Empty";
+            pic9.Tag = "Empty";
         }
     }
 }

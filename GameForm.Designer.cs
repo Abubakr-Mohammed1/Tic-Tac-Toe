@@ -105,7 +105,7 @@
             this.lblWinner.AutoSize = true;
             this.lblWinner.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblWinner.ForeColor = System.Drawing.Color.Lime;
-            this.lblWinner.Location = new System.Drawing.Point(75, 635);
+            this.lblWinner.Location = new System.Drawing.Point(132, 635);
             this.lblWinner.Name = "lblWinner";
             this.lblWinner.Size = new System.Drawing.Size(445, 91);
             this.lblWinner.TabIndex = 3;
@@ -122,6 +122,7 @@
             this.btnRestartGame.TabIndex = 4;
             this.btnRestartGame.Text = "Restart Game";
             this.btnRestartGame.UseVisualStyleBackColor = true;
+            this.btnRestartGame.Click += new System.EventHandler(this.btnRestartGame_Click);
             // 
             // pic8
             // 
